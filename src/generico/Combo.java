@@ -8,35 +8,27 @@ package generico;
 import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JButton;
+import javax.swing.JComboBox;
 
 /**
  *
  * @author SAUL FERNANDO GONZÁLEZ DOMINGUEZ
  * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO 
  */
-public abstract class Boton extends JButton{
-    
-    public Boton(String text, int x, int y, Ventana padre){
-        super();
-        this.setText(text);
-        
-        this.setVisible(true);
-        this.setSize(this.getPreferredSize());
-        
+public abstract class Combo extends JComboBox<String>{
+
+    public Combo(int x, int y, String[] string, Ventana padre) {
+        super(string);
         this.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {
-                //Método abstracto para implementar acciones en Botones
                 action();
-            }
+            } 
         });
-        
         this.setLocation(new Point(x, y));
-        
-        //Agrega el elemento al objeto padre
+        this.setVisible(true);
+        this.setSize(this.getPreferredSize());
         padre.add(this);
     }
-   
     public abstract void action();
 }

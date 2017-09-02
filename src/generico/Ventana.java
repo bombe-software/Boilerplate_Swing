@@ -14,7 +14,8 @@ import javax.swing.Timer;
 
 /**
  *
- * @author SAUL
+ * @author SAUL FERNANDO GONZÁLEZ DOMINGUEZ
+ * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO 
  */
 public abstract class Ventana extends JFrame{
     private Dimension screenSize;
@@ -23,6 +24,8 @@ public abstract class Ventana extends JFrame{
     
     public Ventana(){
         super();
+        
+        //Configuración de una ventana genérica
         this.screenSize = new Dimension();
         this.frameSize = new Dimension();
         this.frameLocation = new Point();
@@ -69,14 +72,16 @@ public abstract class Ventana extends JFrame{
         this.frameLocation.y = ((this.screenSize.width * porcentaje)/100);
     }
     
-        
+    //Crea la ventana en una locación en pantalla específica
     public void configFrame(int porcentaje_x, int porcentaje_y, int porcentaje_height, int porcentaje_width){
         this.setY(porcentaje_y);
         this.setX(porcentaje_x);
         this.setHeight(porcentaje_height);
         this.setWidth(porcentaje_width);
+        this.render();
     }
     
+    //Renderiza y carga los elementos de la ventana
     public void render(){
         this.setVisible(false);
         this.setLocation(this.frameLocation);

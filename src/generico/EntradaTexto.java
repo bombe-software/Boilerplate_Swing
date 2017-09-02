@@ -7,37 +7,24 @@ package generico;
 
 import java.awt.Dimension;
 import java.awt.Point;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import javax.swing.JTextField;
 
 /**
  *
- * @author SAUL
+ * @author SAUL FERNANDO GONZÁLEZ DOMINGUEZ
+ * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO 
  */
 public abstract class EntradaTexto extends JTextField{
     
     
-    public EntradaTexto(double alto, double ancho, int x, int y, Ventana padre){
-        this.addKeyListener(new KeyListener(){
-            @Override
-            public void keyTyped(KeyEvent e) {
-                //Terminas la accion de presionar la tecla
-                completado(e);
+    public EntradaTexto(int x, int y, double alto, double ancho, Ventana padre){
+        this.addKeyListener(new KeyAdapter()
+        {
+            public void keyTyped(KeyEvent e) {                
+                validar(e);
             }
-
-            @Override
-            public void keyPressed(KeyEvent e) {
-                //Bajas el dedo
-                abajo(e);
-            }
-
-            @Override
-            public void keyReleased(KeyEvent e) {
-                //Subes el dedo
-                arriba(e);
-            }
-        
         });
         Dimension d = new Dimension();
         d.setSize(ancho, alto);
@@ -47,8 +34,6 @@ public abstract class EntradaTexto extends JTextField{
         padre.add(this);
     }
     
-    public abstract void abajo(KeyEvent e);
-    public abstract void arriba(KeyEvent e);
-    public abstract void completado(KeyEvent e);
+    public abstract void validar(KeyEvent e);
     
 }

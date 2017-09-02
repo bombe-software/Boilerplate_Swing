@@ -15,40 +15,11 @@ import java.awt.event.KeyEvent;
  * @author SAUL
  */
 public class Prueba extends Ventana{
-    private Boton btn;
-    private EntradaTexto inputTxt;
-    
-    public Prueba(){
-        
-        btn = new Boton("some", 100, 100, this){
-            @Override
-            public void action() {
-                
-            }
-        };
-        
-        inputTxt = new EntradaTexto(20, 100, 10, 10, this){
-            @Override
-            public void abajo(KeyEvent e) {
-                
-            }
 
-            @Override
-            public void arriba(KeyEvent e) {
-                
-            }
-
-            @Override
-            public void completado(KeyEvent e) {
-               
-            }
-        };
-        
-    }
-    
     @Override
     public void loopAction() {
-        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
     
 }
