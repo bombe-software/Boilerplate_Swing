@@ -5,10 +5,7 @@
  */
 package vista;
 
-import generico.Boton;
-import generico.EntradaTexto;
 import generico.Ventana;
-import java.awt.event.KeyEvent;
 
 /**
  *
