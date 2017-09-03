@@ -8,8 +8,13 @@ package main;
 import vista.Prueba;
 
 /**
- *
- * @author SAUL
+ * Propósito: Es una plantilla de elementos gráficos que hereda de las librerías
+ * Swing para hacer más fácil la creacion y configuración de elementos.
+ * 
+ * @author SAUL FERNANDO GONZÁLEZ DOMINGUEZ
+ * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO
+ * @version 1.0.1
+ * @since 02-09-2017
  */
 public class main {
     /**

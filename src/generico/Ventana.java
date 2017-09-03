@@ -15,13 +15,20 @@ import javax.swing.Timer;
 /**
  *
  * @author SAUL FERNANDO GONZÁLEZ DOMINGUEZ
- * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO 
+ * @author CARLOS EDUARDO GONZÁLEZ ANGUIANO
+ * @version 1.0.1
+ * @since 02-09-2017
  */
 public abstract class Ventana extends JFrame{
     private Dimension screenSize;
     private Dimension frameSize;
     private Point frameLocation;
     
+    /**
+    * <h3>Ventana</h3>
+    * 
+    * Crea una ventana heredando propiedades de la clase padre
+    */
     public Ventana(){
         super();
         
